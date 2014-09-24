@@ -7,7 +7,12 @@ MODULES=$(ls $CURRENT_DIR/modules)
 
 source commands.sh
 
-for i in $MODULES;
-do
-	source $CURRENT_DIR/modules/$i
-done
+if [ "$1" != "" ] ; 
+then
+	source $CURRENT_DIR/modules/$1
+else
+	for i in $MODULES ;
+	do
+		source $CURRENT_DIR/modules/$i
+	done
+fi
