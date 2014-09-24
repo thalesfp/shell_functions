@@ -9,7 +9,7 @@ Clone the repository
 git clone https://github.com/thalesfp/shell_functions.git ~/.shell_functions
 ```
 
-Then add to to your script to load all modules
+Then add to your script to load all modules
 
 ```
 source ~/.shell_functions/load_modules.sh
