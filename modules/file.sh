@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source commands.sh
-
 function replace_line_in_file
 {
 	file=$1
@@ -9,7 +7,7 @@ function replace_line_in_file
 	line_content=$3
 	new_line=$4
 	
-	$sed -e "$(echo $line_number)s/$(echo $line_content | sed 's/[\/&]/\\&/g')/$(echo $new_line | sed 's/[\/&]/\\&/g')/" $file
+	$sed -i "" -e "$(echo $line_number)s/$(echo $line_content | sed 's/[\/&]/\\&/g')/$(echo $new_line | sed 's/[\/&]/\\&/g')/" $file
 }
 
 function get_line_number_by_content

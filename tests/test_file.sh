@@ -20,33 +20,26 @@ function teardown
 
 function test_replace_line_in_file_in_line
 {
-	replace_line_in_file $temp_file 2 "second line" "new_second_line"
 
-	echo $temp_file
-	cat $temp_file	
+	result=$(cat <<EOF
+first line
+new_second_line
+third line
+EOF
+)
+	replace_line_in_file $temp_file 2 "second line" "new_second_line"
+	assert_equal "$(cat $temp_file)" "$result"
+
 }
 
 function test_get_line_number_by_content
 {
-	get_line_number_by_content $temp_file "third line"
+	result=$(get_line_number_by_content $temp_file "third line")
+	assert_equal 3 "$result"
 }
 
 function test_line_content_by_number
 {	
-	get_line_content_by_number $temp_file 2
-	
-	rm -rf $temp_file
+	result=$(get_line_content_by_number $temp_file 2)
+	assert_equal "second line" "$result"
 }
-
-ALL_FUNCTIONS=$(typeset -F)
-
-for i in $ALL_FUNCTIONS
-do
-	if [[ $i =~ ^test_.* ]] ;
-	then
-		echo "Testing $i..."
-		setup
-		$i
-		teardown
-	fi
-done
