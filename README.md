@@ -10,14 +10,14 @@ echo "source ~/.shell_functions/load_modules.sh" >> ~/.bash_profile
 
 ### Modules ###
 
-** function.sh **
+**function.sh**
 
  Name | Params | Usage 
 :-----------|:------------|:------------
 function_exists | 1 function_name | return 0 if a function exists
 execute_if_function_exists | 1 function_name | verify if a function exists and execute 
 
-** file.sh **
+**file.sh**
 
  Name | Params | Usage 
 :-----------|:------------|:------------
