@@ -15,7 +15,7 @@ for i in $ALL_FUNCTIONS
 do
 	if [[ $i =~ ^test_.* ]] ;
 	then
-		printf "Testing $i... "
+		printf "Testing $i..."
 		execute_if_function_exists setup		
 		$i
 		execute_if_function_exists teardown

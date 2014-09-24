@@ -1,25 +1,27 @@
 #!/bin/bash
 
+# - Params
+# 1 file
+# 2 line number
+# 3 line content
+# 4 new line
 function replace_line_in_file
-{
-	file=$1
-	line_number=$2
-	line_content=$3
-	new_line=$4
-	
-	$sed -i "" -e "$(echo $line_number)s/$(echo $line_content | sed 's/[\/&]/\\&/g')/$(echo $new_line | sed 's/[\/&]/\\&/g')/" $file
+{	
+	$sed -i "" -e "$(echo $2)s/$(echo $3 | sed 's/[\/&]/\\&/g')/$(echo $4 | sed 's/[\/&]/\\&/g')/" $1
 }
 
+# - Params
+# 1 file
+# 2 text
 function get_line_number_by_content
 {
-	file=$1
-	text=$2
-	$awk "/$text/{ print NR; exit }" $file
+	$awk "/$2/{ print NR; exit }" $1
 }
 
+# - Params
+# 1 file
+# 2 line number
 function get_line_content_by_number
 {
-	file=$1
-	line_number=$2
-	$awk "NR==$line_number" $file
+	$awk "NR==$2" $1
 }
