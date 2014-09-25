@@ -3,9 +3,22 @@ Shell Functions
 
 ### How to install ###
 
+Clone the repository
+
 ```
 git clone https://github.com/thalesfp/shell_functions.git ~/.shell_functions
-echo "source ~/.shell_functions/load_modules.sh" >> ~/.bash_profile 
+```
+
+Then add to your script to load all modules
+
+```
+source ~/.shell_functions/load_modules.sh
+```
+
+Or load a specific module
+
+```
+source ~/.shell_functions/load_modules.sh module_name.sh
 ```
 
 ### Modules ###
