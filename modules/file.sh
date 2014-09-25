@@ -3,9 +3,18 @@
 # - Params
 # 1 file
 # 2 line number
-# 3 line content
 # 4 new line
 function replace_line_in_file
+{	
+	$sed -i "" -e "$(echo $2)s/.*/$(echo $3 | sed 's/[\/&]/\\&/g')/" $1
+}
+
+# - Params
+# 1 file
+# 2 line number
+# 3 line content
+# 4 new line
+function replace_word_in_file
 {	
 	$sed -i "" -e "$(echo $2)s/$(echo $3 | sed 's/[\/&]/\\&/g')/$(echo $4 | sed 's/[\/&]/\\&/g')/" $1
 }

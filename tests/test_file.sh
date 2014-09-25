@@ -20,16 +20,26 @@ function teardown
 
 function test_replace_line_in_file_in_line
 {
-
 	result=$(cat <<EOF
 first line
 new_second_line
 third line
 EOF
 )
-	replace_line_in_file $temp_file 2 "second line" "new_second_line"
+	replace_line_in_file $temp_file 2 "new_second_line"
 	assert_equal "$(cat $temp_file)" "$result"
+}
 
+function test_replace_word_in_file
+{
+	result=$(cat <<EOF
+first line
+second line
+third word
+EOF
+)
+	replace_word_in_file $temp_file 3 "line" "word"
+	assert_equal "$(cat $temp_file)" "$result"
 }
 
 function test_get_line_number_by_content
