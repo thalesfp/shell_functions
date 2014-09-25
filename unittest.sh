@@ -10,7 +10,6 @@ function assert {
 	fi
 
 	echo $SUCCESS_MESSAGE
-
 	return 0
 }
 
@@ -21,7 +20,6 @@ function assert_false {
 	fi
 
 	echo $SUCCESS_MESSAGE
-
 	return 0
 }
 
@@ -32,6 +30,5 @@ function assert_equal {
 	fi
 
 	echo $SUCCESS_MESSAGE
-
 	return 0
 }
