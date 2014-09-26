@@ -72,3 +72,6 @@ is_greater_than | 1 string/number <br />2 string/number | checks if param 1 is g
 is_greater_than_or_equal_to | 1 string/number <br />2 string/number | checks if param 1 is greater than or equal to param 2
 is_less_than | 1 string/number <br />2 string/number | checks if param 1 is less than param 2
 is_less_than_or_equal_to | 1 string/number <br />2 string/number | checks if param 1 is less than or equal to param 2
+is_null | 1 string | checks if param 1 is null
+is_not_null | 1 string | checks if param 1 is not null
+is_dir | 1 string | checks if param 1 is a dir
