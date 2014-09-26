@@ -44,3 +44,14 @@ get_line_content_by_number | 1 file <br />2 line number | get a content of a spe
  Name | Params | Usage 
 :-----------|:------------|:------------
 execute_each | 1 command <br />n params | execute the command n times passing each parameter at a time
+
+**compare.sh**
+
+ Name | Params | Usage 
+:-----------|:------------|:------------
+is_equal | 1 string/number <br />2 string/number | checks if param 1 is equal to param 2
+is_not_equal | 1 string/number <br />2 string/number | checks if param 1 is not equal to param 2
+is_greater_than | 1 string/number <br />2 string/number | checks if param 1 is greater than param 2
+is_greater_than_or_equal_to | 1 string/number <br />2 string/number | checks if param 1 is greater than or equal to param 2
+is_less_than | 1 string/number <br />2 string/number | checks if param 1 is less than param 2
+is_less_than_or_equal_to | 1 string/number <br />2 string/number | checks if param 1 is less than or equal to param 2
