@@ -21,6 +21,21 @@ Or load a specific module
 source ~/.shell_functions/load_modules.sh module_name.sh
 ```
 
+### Example ###
+
+```
+#!/bin/bash
+
+source ~/.shell_functions/load_modules.sh
+
+var1=10
+var2=20
+
+if is_less_than $var1 $var2; then
+ echo "var1 is less than var2"
+fi
+```
+
 ### Modules ###
 
 **function.sh**
