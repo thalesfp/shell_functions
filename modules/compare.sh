@@ -81,3 +81,24 @@ function is_less_than_or_equal_to
 		return 1
 	fi
 }
+
+# - Params
+# 1 string
+function is_null
+{
+	[ -z "$1" ]
+}
+
+# - Params
+# 1 string
+function is_not_null
+{
+	[ -n "$1" ]
+}
+
+# - Params
+# 1 string
+function is_dir
+{
+	[ -d "$1" ]
+}

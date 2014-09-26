@@ -205,3 +205,49 @@ function test_is_less_than_or_equal_to_using_number_and_string
 	is_less_than_or_equal_to 1 a &> /dev/null
 	assert_false $?
 }
+
+# is null
+
+function test_is_null 
+{
+	is_null $fake_var_test_is_null
+	assert $?
+}
+
+function test_is_null_return_false
+{
+	fake_var_test_is_null_return_false="some content"
+	is_null $fake_var_test_is_null_return_false
+	assert_false $?
+}
+
+# is not null
+
+function test_is_not_null 
+{
+	fake_var_test_is_not_null="some content"
+	is_not_null $fake_var_test_is_not_null
+	assert $?
+}
+
+function test_is_not_null_return_false
+{
+	is_not_null $fake_var_test_is_not_null_return_false
+	assert_false $?
+}
+
+# is dir
+
+function test_is_dir
+{
+	dir=~
+	is_dir $dir
+	assert $?
+}
+
+function test_is_dir_return_false
+{
+	dir="/fake_path"
+	is_dir $dir
+	assert_false $?
+}
