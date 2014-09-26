@@ -3,7 +3,7 @@
 # - Params
 # 1 file
 # 2 line number
-# 4 new line
+# 3 new line
 function replace_line_in_file
 {	
 	$sed -i "" -e "$(echo $2)s/.*/$(echo $3 | sed 's/[\/&]/\\&/g')/" $1
