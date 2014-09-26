@@ -1,11 +1,16 @@
 #!/bin/bash
 
+# - Params
+# 1 string/number to test
 function is_number
 {	
 	exp='^[0-9]+$'
 	[[ $1 =~ $exp ]]
 }
 
+# - Params
+# 1 string/number
+# 2 string/number
 function is_equal
 {
 	if is_number $1 && is_number $2 ; then
@@ -15,6 +20,9 @@ function is_equal
 	fi
 }
 
+# - Params
+# 1 string/number
+# 2 string/number
 function is_not_equal
 {
 	if is_number $1 && is_number $2 ; then
@@ -24,6 +32,9 @@ function is_not_equal
 	fi
 }
 
+# - Params
+# 1 string/number
+# 2 string/number
 function is_greater_than
 {
 	if is_number $1 && is_number $2 ; then
@@ -33,6 +44,9 @@ function is_greater_than
 	fi
 }
 
+# - Params
+# 1 string/number
+# 2 string/number
 function is_greater_than_or_equal_to
 {
 	if is_number $1 && is_number $2 ; then
@@ -43,6 +57,9 @@ function is_greater_than_or_equal_to
 	fi
 }
 
+# - Params
+# 1 string/number
+# 2 string/number
 function is_less_than
 {
 	if is_number $1 && is_number $2 ; then
@@ -52,6 +69,9 @@ function is_less_than
 	fi
 }
 
+# - Params
+# 1 string/number
+# 2 string/number
 function is_less_than_or_equal_to
 {
 	if is_number $1 && is_number $2 ; then
