@@ -36,6 +36,9 @@ if is_less_than $var1 $var2; then
 fi
 
 execute_each echo one two tree
+
+# prints each file/directory of the current dir
+execute_each echo $(ls)
 ```
 
 ### Modules ###
