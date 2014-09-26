@@ -3,7 +3,8 @@
 SUCCESS_MESSAGE="\033[33;32m PASS \x1b[m"
 FAIL_MESSAGE="\033[33;31m FAIL \x1b[m"
 
-function assert {
+function assert 
+{
 	if [ "$1" != "0" ]; then
 		echo $FAIL_MESSAGE
 		return 1
@@ -13,7 +14,8 @@ function assert {
 	return 0
 }
 
-function assert_false {
+function assert_false 
+{
 	if [ "$1" == "0" ]; then
 		echo $FAIL_MESSAGE
 		return 1
@@ -23,7 +25,8 @@ function assert_false {
 	return 0
 }
 
-function assert_equal {
+function assert_equal 
+{
 	if [ "$1" != "$2" ]; then
 		echo $FAIL_MESSAGE
 		return 1
