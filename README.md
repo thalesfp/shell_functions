@@ -34,6 +34,8 @@ var2=20
 if is_less_than $var1 $var2; then
  echo "var1 is less than var2"
 fi
+
+execute_each echo one two tree
 ```
 
 ### Modules ###
