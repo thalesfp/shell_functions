@@ -64,6 +64,7 @@ get_line_content_by_number | 1 file <br />2 line number | get a content of a spe
  Name | Params | Usage 
 :-----------|:------------|:------------
 execute_each | 1 command <br />n params | execute the command n times passing each parameter at a time
+confirm | 1 message (optional) <br />2 confirm char (optional) | execute a confirm prompt
 
 **compare.sh**
 
